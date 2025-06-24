@@ -4,7 +4,8 @@ body {
   padding: 0px;
   margin: 0px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./resources/images/background_house.jpg") center center;
+    url("../images/background_house.jpg") center center;
+
   background-size: cover;
   width: 100vw;
   height: 100vh;
