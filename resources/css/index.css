@@ -15,7 +15,7 @@ body {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background: rgb(255, 50, 50);
+  background: rgb(133, 134, 95);
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ body {
   width: 50px;
   height: 50px;
   border: 12px solid #fff;
-  border-bottom: 12px solid rgb(255, 50, 50);
+  border-bottom: 12px solid rgb(133, 134, 95);
   border-radius: 50%;
   margin: 0;
 }
@@ -52,10 +52,10 @@ body {
   display: inline-block;
 }
 .box1 {
-  background: rgb(255, 50, 50);
+  background: rgb(133, 134, 95);
 }
 .box2 {
-  background: rgb(255, 50, 50);
+  background: rgb(133, 134, 95);
   margin-left: -5px;
 }
 #menu {
@@ -84,9 +84,14 @@ body {
   padding-bottom: 10vh;
 }
 #middle h1 {
-  color: rgb(255, 50, 50);
+  color: rgb(133, 134, 95);
   font-size: 70px;
   text-decoration: underline;
+}
+#middle hname {
+  color: rgb(242, 231, 204);
+  font-size: 70px;
+  /* text-decoration: underline; */
 }
 #about {
   width: 10vw;
@@ -142,15 +147,15 @@ body {
   border-radius: 100px 100px 0px 0px;
 }
 #about:hover {
-  background: rgba(255, 50, 50, 0.9);
+  background: rgba(133, 134, 95, 0.9);
   cursor: pointer;
 }
 #work:hover {
-  background: rgba(255, 50, 50, 0.9);
+  background: rgba(133, 134, 95, 0.9);
   cursor: pointer;
 }
 #contact:hover {
-  background: rgba(255, 50, 50, 0.9);
+  background: rgba(133, 134, 95, 0.9);
   cursor: pointer;
 }
 #middle table {
@@ -170,13 +175,13 @@ body {
 }
 .social:hover {
   cursor: pointer;
-  color: rgb(255, 50, 50);
+  color: rgb(133, 134, 95);
 }
 .container {
   width: 90vw;
   height: 90vh;
   padding: 5vh 5vw;
-  background: rgb(255, 50, 50);
+  background: rgb(133, 134, 95);
   color: #fff;
   z-index: 9;
   position: fixed;
@@ -213,6 +218,10 @@ body {
   font-size: 60px;
   text-decoration: underline;
 }
+.container hname {
+  font-size: 60px;
+  /* text-decoration: underline; */
+}
 .container p {
   font-size: 21px;
 }
@@ -230,13 +239,13 @@ body {
 }
 .btn_one:hover {
   cursor: pointer;
-  color: rgb(255, 50, 50);
+  color: rgb(133, 134, 95);
   background: #fff;
 }
 .btn_two {
   font-size: 18px;
   font-family: "Josefin Sans", sans-serif;
-  color: rgb(255, 50, 50);
+  color: rgb(133, 134, 95);
   background: #fff;
   border: 3px solid #fff;
   padding: 8px 40px;
@@ -300,7 +309,7 @@ body {
   font-weight: bold;
 }
 #footer a {
-  color: rgb(255, 50, 50);
+  color: rgb(133, 134, 95);
 }
 #particles-js {
   position: fixed;
@@ -315,14 +324,14 @@ body {
   background: #fff;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(255, 50, 50);
+  background: rgb(133, 134, 95);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 50, 50, 0.8);
+  background: rgba(133, 134, 95, 0.8);
 }
 ::selection {
   color: #fff;
-  background: rgb(255, 50, 50);
+  background: rgb(133, 134, 95);
 }
 
 @media (max-width: 800px) {
@@ -417,23 +426,4 @@ body {
 .skills-list li .fas {
   color: #fff;
   font-size: 20px;
-}
-
-/* --- Responsive styles for About Section --- */
-@media (max-width: 800px) {
-  .profile-layout {
-    flex-direction: column; /* Stack image on top of text */
-    align-items: center; /* Center the items when stacked */
-    gap: 25px;
-  }
-  .profile-headshot {
-    flex-basis: 220px; /* A good size for mobile */
-  }
-  .profile-text {
-    text-align: center;
-  }
-  .skills-list {
-    grid-template-columns: 1fr; /* Single column on mobile */
-    text-align: left;
-  }
 }
