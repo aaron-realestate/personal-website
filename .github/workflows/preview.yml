@@ -1,0 +1,25 @@
+name: Preview static site build
+
+on:
+  push:
+    branches-ignore: ["main"] # Runs on all branches except main
+  workflow_dispatch:
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Preview Artifact
+        run: |
+          echo "Pretend we're building your site here"
+          mkdir preview
+          cp -r * preview/
+
+      - name: Upload preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-site
+          path: preview
