@@ -94,6 +94,20 @@ git pull origin main
 
 This updates your local copy with any new changes others have made.
 
+### Checking out someone else's branch (e.g. for testing a PR)
+
+If someone has submitted a pull request and you'd like to test it locally before merging:
+
+1. Fetch all remote branches:
+   ```bash
+   git fetch origin
+   ```
+
+2. Check out the branch by name:
+ ```bash
+   git checkout their-branch-name
+   ```
+
 ---
 
 ## Viewing the Website Locally
