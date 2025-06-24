@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Character encoding and responsiveness setup -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <!-- Page title -->
     <title>Aaron Gathrid - Real Estate</title>
 
     <!-- External styles and fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" crossorigin="anonymous">
-    
-    <!-- External JavaScript library for animations and effects -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    
-    <!-- Your custom CSS file -->
-    <link rel="stylesheet" href="resources/css/index.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      crossorigin="anonymous"
+    />
 
+    <!-- External JavaScript library for animations and effects -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Your custom CSS file -->
+    <link rel="stylesheet" href="resources/css/index.css" />
+  </head>
+  <body>
     <!-- Loading spinner screen -->
     <div id="loading">
-        <div id="spinner"></div>
+      <div id="spinner"></div>
     </div>
 
     <!-- Particle animation background -->
@@ -32,142 +44,246 @@
 
     <!-- Animation boxes shown on page load -->
     <div id="box">
-        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
-        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
-        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
-        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
+      <div
+        class="box1 onlywide animated bounceOutLeft"
+        style="animation-delay: 1.7s"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutLeft"
+        style="animation-delay: 1.8s"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutLeft"
+        style="animation-delay: 1.9s"
+      ></div>
+      <div
+        class="box2 animated bounceOutRight"
+        style="animation-delay: 1.9s"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutRight"
+        style="animation-delay: 1.8s"
+      ></div>
+      <div
+        class="box2 onlywide animated bounceOutRight"
+        style="animation-delay: 1.7s"
+      ></div>
     </div>
 
     <!-- Top navigation buttons -->
-    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
-    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
-    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
+    <a
+      id="about"
+      onclick="showabout()"
+      class="animated fadeIn"
+      style="animation-delay: 2.2s"
+      >about</a
+    >
+    <a
+      id="work"
+      onclick="showwork()"
+      class="animated fadeIn"
+      style="animation-delay: 2.2s"
+      >work</a
+    >
+    <a
+      id="contact"
+      onclick="showcontact()"
+      class="animated fadeIn"
+      style="animation-delay: 2.2s"
+      >contact</a
+    >
 
     <!-- Main introduction section -->
-    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
-        <hname>Aaron Gathrid</hname>
-        <h2>Real Estate Broker</h2>
+    <div id="middle" class="animated slideInDown" style="animation-delay: 2s">
+      <hname>Aaron Gathrid</hname>
+      <h2>Real Estate Broker</h2>
 
-        <!-- Navigation menu inside the hero section -->
-        <div id="menu">
-            <a onclick="showabout()">about</a>
-            <a onclick="showwork()">work</a>
-            <a onclick="showcontact()">contact</a>
-        </div>
+      <!-- Navigation menu inside the hero section -->
+      <div id="menu">
+        <a onclick="showabout()">about</a>
+        <a onclick="showwork()">work</a>
+        <a onclick="showcontact()">contact</a>
+      </div>
 
-        <!-- Social media icons -->
-        <table>
-            <tr>
-                <td class="animated zoomIn" style="animation-delay:2.8s;">
-                    <a class="social" href="https://aarongathrid.bhhsrep.com" target="_blank">
-                        <i class="fas fa-globe"></i>
-                    </a>
-                </td>
-                <td class="animated zoomIn" style="animation-delay:2.2s;">
-                    <a class="social" href="https://aarongrealestate.wordpress.com" target="_blank">
-                        <i class="fab fa-wordpress"></i>
-                    </a>
-                </td>
-                <td class="animated zoomIn" style="animation-delay:2.6s;">
-                    <a class="social" href="https://www.instagram.com/aarongathrid.realestate/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </td>
-                <td class="animated zoomIn" style="animation-delay:2.2s;">
-                    <a class="social" href="https://www.facebook.com/aaron.gathrid/" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </td>
-            </tr>
-        </table>
+      <!-- Social media icons -->
+      <table>
+        <tr>
+          <td class="animated zoomIn" style="animation-delay: 2.8s">
+            <a
+              class="social"
+              href="https://aarongathrid.bhhsrep.com"
+              target="_blank"
+            >
+              <i class="fas fa-globe"></i>
+            </a>
+          </td>
+          <td class="animated zoomIn" style="animation-delay: 2.2s">
+            <a
+              class="social"
+              href="https://aarongrealestate.wordpress.com"
+              target="_blank"
+            >
+              <i class="fab fa-wordpress"></i>
+            </a>
+          </td>
+          <td class="animated zoomIn" style="animation-delay: 2.6s">
+            <a
+              class="social"
+              href="https://www.instagram.com/aarongathrid.realestate/"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </td>
+          <td class="animated zoomIn" style="animation-delay: 2.2s">
+            <a
+              class="social"
+              href="https://www.facebook.com/aaron.gathrid/"
+              target="_blank"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+          </td>
+        </tr>
+      </table>
     </div>
 
     <!-- WORK SECTION: shows portfolio or projects -->
     <div id="work_container" class="container">
-        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-        <h1>works.</h1>
-        <section>
-            <h2>work title</h2>
-            <p>
-                <!-- Placeholder description text -->
-                Lorem ipsum dolor sit amet... (sample placeholder text).
-            </p>
-            <div id="used">
-                <!-- Technologies used -->
-                <div><i class="fas fa-circle"></i>&nbsp;HTML5</div>
-                <div><i class="fas fa-circle"></i>&nbsp;CSS3</div>
-                <div><i class="fas fa-circle"></i>&nbsp;Javascript</div>
-            </div>
-            <!-- Buttons (can be linked to demos or more info) -->
-            <button class="btn_one">button 1</button>
-            <button class="btn_two">button 2</button>
-        </section>
+      <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+      <h1>works.</h1>
+      <section>
+        <h2>work title</h2>
+        <p>
+          <!-- Placeholder description text -->
+          Lorem ipsum dolor sit amet... (sample placeholder text).
+        </p>
+        <div id="used">
+          <!-- Technologies used -->
+          <div><i class="fas fa-circle"></i>&nbsp;HTML5</div>
+          <div><i class="fas fa-circle"></i>&nbsp;CSS3</div>
+          <div><i class="fas fa-circle"></i>&nbsp;Javascript</div>
+        </div>
+        <!-- Buttons (can be linked to demos or more info) -->
+        <button class="btn_one">button 1</button>
+        <button class="btn_two">button 2</button>
+      </section>
     </div>
 
     <!-- ABOUT SECTION: biographical and skills -->
     <div id="about_container" class="container">
-        <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-        <h1>about.</h1>
+      <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+      <h1>about.</h1>
 
-        <section>
-            <h2>about me</h2>
+      <section>
+        <h2>about me</h2>
 
-            <!-- Updated headshot and text layout -->
-            <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px; margin: 20px 0;">
-                <!-- Image section with improved alignment -->
-                <div style="flex: 0 0 180px;">
-                    <img 
-                        src="resources/images/aag-headshot.png" 
-                        alt="Aaron Gathrid Headshot" 
-                        style="width: 100%; max-width: 180px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);"
-                    />
-                </div>
+        <!-- Updated headshot and text layout -->
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 30px;
+            margin: 20px 0;
+          "
+        >
+          <!-- Image section with improved alignment -->
+          <div style="flex: 0 0 180px">
+            <img
+              src="resources/images/aag-headshot.png"
+              alt="Aaron Gathrid Headshot"
+              style="
+                width: 100%;
+                max-width: 180px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+              "
+            />
+          </div>
 
-                <!-- Text content with better spacing -->
-                <div style="flex: 1; min-width: min(100%, 300px);">
-                    <p>
-                        Yes – I'm young, and no, I don't have 40 years of experience. And that's exactly why I might be the best person to represent you. Unlike many agents who rely on repeat business and coast on reputation, I'm building mine from the ground up — with energy, focus, and an uncompromising standard of service.
-                    </p>
-                    <p>
-                        Every client matters deeply to me. I treat each transaction as if my career depends on it — because it does.
-                    </p>
-                    <p>
-                        Real estate runs deep in my roots. I grew up immersed in the world of design and construction as the son of a respected home designer and builder. From early on, I learned what makes a home not just beautiful, but valuable: timeless design, great location, and harmony with its surroundings. Those lessons shaped my approach and sharpened my eye as an agent.
-                    </p>
-                    <p>
-                        Licensed in Oregon and Idaho, I bring a fresh perspective and full-time commitment to buyers, sellers, and landowners across the Eugene area. I've chosen this work because I believe in it — in new chapters, in sound investments, and in the trust it takes to guide people through both.
-                    </p>
-                    <p>
-                        Let’s work together to find the right property and make your next move your best one.
-                    </p>
-                </div>
-            </div>
-        </section>
+          <!-- Text content with better spacing -->
+          <div style="flex: 1; min-width: min(100%, 300px)">
+            <p>
+              Yes – I'm young, and no, I don't have 40 years of experience. And
+              that's exactly why I might be the best person to represent you.
+              Unlike many agents who rely on repeat business and coast on
+              reputation, I'm building mine from the ground up — with energy,
+              focus, and an uncompromising standard of service.
+            </p>
+            <p>
+              Every client matters deeply to me. I treat each transaction as if
+              my career depends on it — because it does.
+            </p>
+            <p>
+              Real estate runs deep in my roots. I grew up immersed in the world
+              of design and construction as the son of a respected home designer
+              and builder. From early on, I learned what makes a home not just
+              beautiful, but valuable: timeless design, great location, and
+              harmony with its surroundings. Those lessons shaped my approach
+              and sharpened my eye as an agent.
+            </p>
+            <p>
+              Licensed in Oregon and Idaho, I bring a fresh perspective and
+              full-time commitment to buyers, sellers, and landowners across the
+              Eugene area. I've chosen this work because I believe in it — in
+              new chapters, in sound investments, and in the trust it takes to
+              guide people through both.
+            </p>
+            <p>
+              Let’s work together to find the right property and make your next
+              move your best one.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section>
-            <h2>skills</h2>
-            <p>i do everything ;)</p>
-        </section>
+      <section>
+        <h2>skills</h2>
+        <p>i do everything ;)</p>
+      </section>
     </div>
 
     <!-- CONTACT SECTION: contact form -->
     <div id="contact_container" class="container">
-        <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
-        <h1>contact.</h1>
-        <section>
-            <h2>contact me</h2>
-            <p>
-                <!-- Simple contact form -->
-                <form action="https://formsubmit.co/aarongathrid@bhhsrep.com" method="POST">
-                    <input type="text" name="name" placeholder="name" required>
-                    <input type="email" name="email" placeholder="email" required><br>
-                    <textarea name="message" placeholder="your message" required rows="5"></textarea><br>
-                    <button class="btn_one" type="submit">send</button>
-                </form>
-            </p>
-        </section>
+      <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+      <h1>contact.</h1>
+      <section>
+        <h2>contact me</h2>
+        <form
+          id="contactForm"
+          action="https://formsubmit.co/aarongathrid@bhhsrep.com"
+          method="POST"
+          novalidate
+        >
+          <input type="text" name="name" placeholder="name" required />
+          <input type="email" name="email" placeholder="email" required /><br />
+          <input type="tel" name="phone" placeholder="phone (optional)" /><br />
+          <textarea
+            name="message"
+            placeholder="your message"
+            required
+            rows="5"
+          ></textarea
+          ><br />
+          <button class="btn_two" type="submit">
+            send
+            <span class="arrow">→</span>
+          </button>
+          <!-- Screen reader live region -->
+          <div
+            id="form-status"
+            aria-live="polite"
+            style="
+              position: absolute;
+              left: -9999px;
+              height: 1px;
+              width: 1px;
+              overflow: hidden;
+            "
+          ></div>
+        </form>
+      </section>
     </div>
 
     <!-- Footer with company name and link -->
@@ -179,15 +295,22 @@
 
     <!-- Footer with company name and linked logo -->
     <div id="footer">
-        <a href="https://aarongathrid.bhhsrep.com" target="_blank" rel="noopener noreferrer">
-            <img src="resources/images/BHHSREP logo.png" alt="BHHS Logo" style="height: 100px;">
-        </a>
+      <a
+        href="https://aarongathrid.bhhsrep.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="resources/images/BHHSREP logo.png"
+          alt="BHHS Logo"
+          style="height: 100px"
+        />
+      </a>
     </div>
-
 
     <!-- Custom JavaScript files for interactivity and animations -->
     <script src="scripts/index.js" type="text/javascript"></script>
     <script src="scripts/particles.js"></script>
     <script src="scripts/app.js"></script>
-</body>
+  </body>
 </html>

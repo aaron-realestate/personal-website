@@ -253,12 +253,57 @@ body {
   border-radius: 80px;
   font-weight: bold;
   margin: 2vh 10px;
-  transition: 0.4s ease-in-out;
+  transition: padding 0.4s ease-in-out, width 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  width: 140px; /* fixed initial width to allow smooth expand */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn_two:hover {
   cursor: pointer;
   padding: 8px 60px;
 }
+
+/* Sending state */
+.btn_two.sending {
+  width: 200px; /* expanded width */
+  padding-right: 60px; /* extra padding on right to make room for arrow */
+  pointer-events: none; /* disable pointer during sending */
+}
+
+/* Arrow element */
+.btn_two .arrow {
+  position: absolute;
+  right: 20px;
+  opacity: 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(133, 134, 95);
+  transition: opacity 0.4s ease, right 0.4s ease;
+  user-select: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn_two.sending .arrow {
+  opacity: 1;
+  right: 30px;
+}
+/* Focus styles for accessibility */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 2px solid rgb(133, 134, 95);
+  outline-offset: 2px;
+}
+
+/* Button already updated with .btn_two and arrow styles from before */
+
+/* Optional: fade button arrow and expand on sending */
+/* (Make sure your previous .btn_two and .arrow styles are included) */
+
 .container form input {
   width: 46%;
   margin: 20px 1%;
