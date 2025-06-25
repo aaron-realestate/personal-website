@@ -251,14 +251,17 @@
       <section>
         <h2>contact me</h2>
         <form
-          id="contactForm"
-          action="https://formsubmit.co/17a7be11c84410fe2cce00450f2a9273"
-          method="POST"
-          novalidate
+        id="contactForm"
+        action="https://formsubmit.co/17a7be11c84410fe2cce00450f2a9273"
+        method="POST"
+        novalidate
         >
-          <input type="text" name="name" placeholder="name" required />
-          <input type="email" name="email" placeholder="email" required /><br />
-          <input type="tel" name="phone" placeholder="phone (optional)" /><br />
+        <!-- Redirect after submission -->
+        <input type="hidden" name="_next" value="https://aaron-realestate.github.io/personal-website/" />
+
+        <input type="text" name="name" placeholder="name" required />
+        <input type="email" name="email" placeholder="email" required /><br />
+        <input type="tel" name="phone" placeholder="phone (optional)" /><br />
           <textarea
             name="message"
             placeholder="your message"
@@ -266,11 +269,12 @@
             rows="5"
           ></textarea
           ><br />
-          <button class="btn_two" type="submit">
+        <button class="btn_two" type="submit">
             send
             <span class="arrow">→</span>
-          </button>
-          <!-- Screen reader live region -->
+        </button>
+        </form>
+          <!-- Screen reader live region
           <div
             id="form-status"
             aria-live="polite"
@@ -282,7 +286,7 @@
               overflow: hidden;
             "
           ></div>
-        </form>
+        </form> -->
       </section>
     </div>
 
