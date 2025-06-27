@@ -381,20 +381,21 @@ body {
     width: 100%;
   }
 }
-/* --- About Section Layout --- */
-.profile-layout {
+/* --- About Section: Image + Text Layout --- */
+/* --- About Section Rebuilt Layout --- */
+.about-flex {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start; /* Aligns image to the top of the text block */
-  gap: 40px; /* Space between image and text */
-  margin-top: -2vh; /* Adjusts spacing to look better with the h2 */
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 2vh;
 }
 
-.profile-headshot {
-  flex: 0 0 200px; /* Sets a fixed width for the image container */
+.about-photo {
+  flex: 0 0 200px;
 }
 
-.profile-headshot img {
+.about-photo img {
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -402,39 +403,71 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-.profile-text {
-  flex: 1; /* Allows text to fill the remaining space */
-  min-width: 300px; /* Prevents text from getting too squished */
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  color: #fff;
 }
 
-.profile-text p {
-  font-size: 19px; /* Slightly smaller for better readability in a block */
+.about-text p {
+  font-size: 19px;
   line-height: 1.6;
+  margin-top: 0;
+}
+
+/* Full-width follow-up paragraph */
+.about-full {
+  margin-top: 30px;
+  color: #fff;
+}
+
+.about-full p {
+  font-size: 19px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* --- Skills List --- */
+.skills-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.skills-tagline {
+  font-size: 16px;
+  font-style: italic;
+  color: #b3b38c;
 }
 
 .skills-list {
   list-style: none;
   padding: 0;
-  margin: -2vh 0 0 0;
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* Responsive columns */
-  gap: 15px 25px;
+  margin: 2vh 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Evenly space items */
+  gap: 20px 40px;
 }
 
 .skills-list li {
   font-size: 18px;
   display: flex;
   align-items: center;
+  color: #fff;
   gap: 12px;
+  flex: 1 1 22%; /* Ensures they sit 4 per row, responsive downstacking */
+  min-width: 200px;
 }
 
 .skills-list li .fas {
-  color: #fff;
+  color: #b3b38c;
   font-size: 20px;
 }
+
+
 
 /* Container text color for all work content */
 #work_container {

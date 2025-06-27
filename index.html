@@ -192,79 +192,52 @@
 
 
 
-    <!-- ABOUT SECTION: biographical and skills -->
-    <div id="about_container" class="container">
-      <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-      <h1>about.</h1>
+<!-- ABOUT SECTION: biographical and skills -->
+<div id="about_container" class="container">
+  <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+  <h1>about.</h1>
 
-      <section>
-        <h2>about me</h2>
-
-        <!-- Updated headshot and text layout -->
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            gap: 30px;
-            margin: 20px 0;
-          "
-        >
-          <!-- Image section with improved alignment -->
-          <div style="flex: 0 0 180px">
-            <img
-              src="resources/images/aag-headshot.png"
-              alt="Aaron Gathrid Headshot"
-              style="
-                width: 100%;
-                max-width: 180px;
-                border-radius: 8px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-              "
-            />
-          </div>
-
-          <!-- Text content with better spacing -->
-          <div style="flex: 1; min-width: min(100%, 300px)">
-            <p>
-              Yes – I'm young, and no, I don't have 40 years of experience. And
-              that's exactly why I might be the best person to represent you.
-              Unlike many agents who rely on repeat business and coast on
-              reputation, I'm building mine from the ground up — with energy,
-              focus, and an uncompromising standard of service.
-            </p>
-            <p>
-              Every client matters deeply to me. I treat each transaction as if
-              my career depends on it — because it does.
-            </p>
-            <p>
-              Real estate runs deep in my roots. I grew up immersed in the world
-              of design and construction as the son of a respected home designer
-              and builder. From early on, I learned what makes a home not just
-              beautiful, but valuable: timeless design, great location, and
-              harmony with its surroundings. Those lessons shaped my approach
-              and sharpened my eye as an agent.
-            </p>
-            <p>
-              Licensed in Oregon and Idaho, I bring a fresh perspective and
-              full-time commitment to buyers, sellers, and landowners across the
-              Eugene area. I've chosen this work because I believe in it — in
-              new chapters, in sound investments, and in the trust it takes to
-              guide people through both.
-            </p>
-            <p>
-              Let’s work together to find the right property and make your next
-              move your best one.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>skills</h2>
-        <p>i do everything ;)</p>
-      </section>
+  <section>
+  <div class="about-flex">
+    <!-- Left: Headshot -->
+    <div class="about-photo">
+      <img src="resources/images/aag-headshot.png" alt="Aaron Gathrid Headshot" />
     </div>
+
+    <!-- Right: Text next to photo -->
+    <div class="about-text">
+      <p>
+        Yes – I'm young, and no, I don't have 40 years of experience. And that's exactly why I might be the best person to represent you. Unlike many agents who rely on repeat business and coast on reputation, I'm building mine from the ground up — with energy, focus, and an uncompromising standard of service. Every client matters deeply to me. I treat each transaction as if my career depends on it — because it does.
+      </p>
+      <p>
+        Real estate runs deep in my roots. I grew up immersed in the world of design and construction as the son of a respected home builder. From early on, I learned what makes a home not just beautiful, but valuable: timeless design, great location, and harmony with its surroundings. Those lessons shaped my approach and sharpened my eye as an agent.
+      </p>
+    </div>
+  </div>
+
+  <!-- Full-width paragraph under image + text -->
+  <div class="about-full">
+    <p>
+      Licensed in Oregon and Idaho, I bring a fresh perspective and full-time commitment to buyers, sellers, and investors across Lane County. I've chosen this work because I believe in it — in new chapters, in sound investments, and in the trust it takes to guide people through both. Let’s work together to find the right property and make your next move your best one.
+    </p>
+  </div>
+</section>
+
+
+  <section>
+    <h2 class="skills-title">
+      skills <span class="skills-tagline"><em>I do everything ;)</em></span>
+    </h2>
+    <ul class="skills-list">
+      <li><i class="fas fa-check-circle"></i>Strategic Negotiation</li>
+      <li><i class="fas fa-check-circle"></i>Targeted Marketing</li>
+      <li><i class="fas fa-check-circle"></i>Contract Expertise</li>
+      <li><i class="fas fa-check-circle"></i>Client Advocacy</li>
+    </ul>
+  </section>
+</div>
+
+
 
     <!-- CONTACT SECTION: contact form -->
     <div id="contact_container" class="container">
