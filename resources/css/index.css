@@ -435,3 +435,53 @@ body {
   color: #fff;
   font-size: 20px;
 }
+
+/* Container text color for all work content */
+#work_container {
+  color: #fff; /* base text color white */
+  font-family: "Josefin Sans", sans-serif; /* to keep consistent font */
+}
+
+/* Testimonials text */
+#work_container #testimonials .testimonial p {
+  font-size: 16px; /* testimonial body text */
+  line-height: 1.5;
+  color: #fff; /* white text */
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #85785f; /* subtle left line */
+  padding-left: 1rem;
+}
+
+/* Names and addresses - slightly darker */
+#work_container #testimonials .testimonial strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: #b3b38c; /* lighter olive/dark beige for subtle contrast */
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+}
+
+/* Match btn_two style and hover elongation for btn_one */
+#work_container > section > a > button.btn_one {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(133, 134, 95);
+  background: #fff;
+  border: 3px solid #fff;
+  padding: 8px 40px;
+  border-radius: 80px;
+  font-weight: bold;
+  margin: 2vh 10px 2vh 0;
+  transition: padding 0.4s ease-in-out; /* smooth padding transition */
+}
+
+#work_container > section > a > button.btn_one:hover {
+  cursor: pointer;
+  padding: 8px 60px; /* elongates width on hover */
+  color: rgb(133, 134, 95); /* keep same text color */
+  background: #fff; /* keep same background */
+  border-color: #fff; /* keep same border */
+}
+
+
