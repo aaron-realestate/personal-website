@@ -381,6 +381,15 @@ body {
     width: 100%;
   }
 }
+
+/**Main page - Oregon | Idaho - line**/
+.hometown {
+  color: #e1dfdf;
+  margin-top: -12px; /* Adjust as needed to tighten spacing */
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
 /* --- About Section: Image + Text Layout --- */
 /* --- About Section Rebuilt Layout --- */
 .about-flex {
