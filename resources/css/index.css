@@ -99,36 +99,34 @@ body {
   height: 10vw;
   text-align: center;
   font-size: 25px;
-  transform: rotate(-90deg);
   background: transparent;
   color: #fff;
   position: fixed;
   left: 0;
-  bottom: 40vh;
+  bottom: 66vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 4;
   transition: 0.4s ease-in-out;
-  border-radius: 0px 0px 100px 100px;
+  border-radius: 0px 100px 100px 0px;
 }
 #work {
   width: 10vw;
   height: 10vw;
   text-align: center;
   font-size: 25px;
-  transform: rotate(90deg);
   background: transparent;
   color: #fff;
   position: fixed;
-  right: 0;
-  bottom: 40vh;
+  left: 0;
+  bottom: 33vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 4;
   transition: 0.4s ease-in-out;
-  border-radius: 0px 0px 100px 100px;
+  border-radius: 0px 100px 100px 0px;
 }
 #contact {
   width: 10vw;
@@ -147,15 +145,34 @@ body {
   transition: 0.4s ease-in-out;
   border-radius: 100px 100px 0px 0px;
 }
-#about:hover {
-  background: rgba(133, 134, 95, 0.9);
-  cursor: pointer;
+#marketintel,
+#headlines {
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 25px;
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  transition: 0.4s ease-in-out;
+  border-radius: 100px 0px 0px 100px;
 }
-#work:hover {
-  background: rgba(133, 134, 95, 0.9);
-  cursor: pointer;
+#marketintel {
+    bottom: 66vh;
 }
-#contact:hover {
+#headlines {
+    bottom: 33vh;
+}
+#about:hover,
+#work:hover,
+#contact:hover,
+#marketintel:hover,
+#headlines:hover {
   background: rgba(133, 134, 95, 0.9);
   cursor: pointer;
 }
