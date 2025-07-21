@@ -3,6 +3,8 @@
   <head>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXEZBW9PZV"></script>
+<!-- PDF.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -88,6 +90,13 @@
       >about</a
     >
     <a
+      id="intel"
+      onclick="showintel()"
+      class="animated fadeIn"
+      style="animation-delay: 2.2s"
+      >intel</a
+    >
+    <a
       id="work"
       onclick="showwork()"
       class="animated fadeIn"
@@ -114,6 +123,7 @@
       <div id="menu">
         <a onclick="showabout()">about</a>
         <a onclick="showwork()">work</a>
+        <a onclick="showintel()">intel</a>
         <a onclick="showcontact()">contact</a>
       </div>
 
@@ -172,7 +182,7 @@
 
     <!-- WORKS SECTION: Testimonials & Transactions -->
 <div id="work_container" class="container">
-  <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+  <div onclick="closework()"><i class="fas fa-angle-left"></i></div>
   <h1>works.</h1>
 
   <!-- Move button to top -->
@@ -210,6 +220,49 @@
 
     </a>
   </section>
+</div>
+
+
+<!-- INTEL SECTION: Testimonials & Transactions -->
+<div id="intel_container" class="container">
+  <div onclick="closeintel()"><i class="fas fa-angle-right"></i></div>
+  <h1>market intelligence.</h1>
+
+  <!-- Toggle Buttons -->
+  <div id="intel_toggle">
+    <button id="headlines_btn" class="btn_two active">Headlines</button>
+    <button id="briefs_btn" class="btn_two">Market Intelligence Briefs</button>
+  </div>
+
+  <!-- Headlines Section -->
+  <div id="headlines_section" class="intel-section">
+    <div id="pdf-viewer-container" style="position: relative; max-width: 700px; margin: auto;">
+      <canvas id="pdf-render"></canvas>
+
+      <!-- Controls below the canvas -->
+      <div id="pdf-controls" style="text-align: center; margin-top: 15px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; align-items: center;">
+        
+        <button id="pdf-prev" class="btn_one">← Prev</button>
+                
+        <span id="pdf-page-count" style="font-family: 'Josefin Sans', sans-serif; font-weight: bold; font-size: 18px; color: #fff;">
+          Page <span id="pdf-current-page">1</span> of <span id="pdf-total-pages">--</span>
+        </span>
+
+        <button id="pdf-next" class="btn_one">Next →</button>
+        
+        <!-- <button id="pdf-fullscreen" class="btn_one" style="margin-left: 20px;">Fullscreen</button> -->
+        
+        <a href="resources/pdfs/June.25 Issue.pdf" target="_blank" download id="pdf-download" class="btn_one" style="margin-left: 20px;">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Briefs Section -->
+  <div id="briefs_section" class="intel-section" style="display: none;">
+    <p>These are your market intelligence briefs...</p>
+  </div>
 </div>
 
 
