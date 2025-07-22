@@ -92,17 +92,15 @@ $(document).ready(function () {
     $("#headlines_section").hide();
   });
 
-  // PDF.js viewer code
-  const url = "resources/pdfs/June.25 Issue.pdf";
+  const scale = 1.2;
+  const canvas = document.getElementById("pdf-render");
+  const ctx = canvas.getContext("2d");
 
   let pdfDoc = null,
     pageNum = 1,
     pageIsRendering = false,
-    pageNumIsPending = null;
-
-  const scale = 1.2;
-  const canvas = document.getElementById("pdf-render");
-  const ctx = canvas.getContext("2d");
+    pageNumIsPending = null,
+    currentPdfUrl = null;
 
   // Render the page
   function renderPage(num) {
@@ -129,12 +127,11 @@ $(document).ready(function () {
         }
       });
 
-      // Update page counters in new format
       $("#pdf-current-page").text(num);
     });
   }
 
-  // Check for pages rendering and queue next page if needed
+  // Queue page rendering if another page is rendering
   function queueRenderPage(num) {
     if (pageIsRendering) {
       pageNumIsPending = num;
@@ -143,39 +140,72 @@ $(document).ready(function () {
     }
   }
 
-  // Show Prev Page
+  // Load and render PDF by URL
+  function loadPdf(url) {
+    currentPdfUrl = url;
+    pageNum = 1;
+    pdfDoc = null;
+    $("#pdf-total-pages").text("--");
+    $("#pdf-current-page").text("1");
+    $("#pdf-download").attr("href", url);
+
+    pdfjsLib
+      .getDocument(url)
+      .promise.then((pdfDoc_) => {
+        pdfDoc = pdfDoc_;
+        $("#pdf-total-pages").text(pdfDoc.numPages);
+        renderPage(pageNum);
+      })
+      .catch((err) => {
+        $("#headlines_section").html(
+          `<p style="color: red;">Error loading PDF: ${err.message}</p>`
+        );
+      });
+  }
+
+  // Prev Page
   $("#pdf-prev").on("click", () => {
-    if (pageNum <= 1) return;
+    if (!pdfDoc || pageNum <= 1) return;
     pageNum--;
     queueRenderPage(pageNum);
   });
 
-  // Show Next Page
+  // Next Page
   $("#pdf-next").on("click", () => {
-    if (pageNum >= pdfDoc.numPages) return;
+    if (!pdfDoc || pageNum >= pdfDoc.numPages) return;
     pageNum++;
     queueRenderPage(pageNum);
   });
 
-  // Fullscreen toggle for PDF container
-  $("#pdf-fullscreen").on("click", () => {
-    const elem = document.getElementById("pdf-viewer-container");
-    if (!document.fullscreenElement) {
-      elem.requestFullscreen();
-    } else {
-      document.exitFullscreen();
-    }
-  });
+  // Fetch PDF list JSON, populate selector, and load newest PDF by default
+  fetch("resources/pdfs/pdfList.json")
+    .then((res) => res.json())
+    .then((pdfList) => {
+      if (!Array.isArray(pdfList) || pdfList.length === 0) {
+        $("#headlines_section").html(
+          `<p style="color: red;">No PDFs found in the list.</p>`
+        );
+        return;
+      }
 
-  // Load the PDF document
-  pdfjsLib
-    .getDocument(url)
-    .promise.then((pdfDoc_) => {
-      pdfDoc = pdfDoc_;
-      $("#pdf-total-pages").text(pdfDoc.numPages);
-      renderPage(pageNum);
+      // Populate dropdown
+      const $selector = $("#pdf-selector");
+      pdfList.forEach(({ name, file }) => {
+        const option = $("<option>").val(file).text(name);
+        $selector.append(option);
+      });
+
+      // Load newest PDF by default (first in list)
+      loadPdf(pdfList[0].file);
+
+      // Change handler for dropdown to load selected PDF
+      $selector.on("change", function () {
+        loadPdf($(this).val());
+      });
     })
     .catch((err) => {
-      $("#headlines_section").html(`<p>Error loading PDF: ${err.message}</p>`);
+      $("#headlines_section").html(
+        `<p style="color: red;">Error loading PDF list: ${err.message}</p>`
+      );
     });
 });

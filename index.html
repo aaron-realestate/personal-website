@@ -234,25 +234,47 @@
     <button id="briefs_btn" class="btn_two">Market Intelligence Briefs</button>
   </div>
 
+
   <!-- Headlines Section -->
   <div id="headlines_section" class="intel-section">
+    <!-- PDF Selector -->
+    <div style="text-align: center; margin-bottom: 20px;">
+      <label for="pdf-selector" style="color: #fff; font-family: 'Josefin Sans', sans-serif; font-weight: bold; font-size: 18px; margin-right: 10px;">
+        Select Issue:
+      </label>
+      <select id="pdf-selector" style="font-size: 16px; padding: 6px 12px; border-radius: 8px; border: none; font-family: 'Josefin Sans'; color:rgb(133, 134, 95);">
+        <!-- Options populated by JS -->
+      </select>
+    </div>
+
     <div id="pdf-viewer-container" style="position: relative; max-width: 700px; margin: auto;">
       <canvas id="pdf-render"></canvas>
 
       <!-- Controls below the canvas -->
-      <div id="pdf-controls" style="text-align: center; margin-top: 15px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; align-items: center;">
-        
+      <div
+        id="pdf-controls"
+        style="text-align: center; margin-top: 15px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; align-items: center;"
+      >
         <button id="pdf-prev" class="btn_one">← Prev</button>
-                
-        <span id="pdf-page-count" style="font-family: 'Josefin Sans', sans-serif; font-weight: bold; font-size: 18px; color: #fff;">
+
+        <span
+          id="pdf-page-count"
+          style="font-family: 'Josefin Sans', sans-serif; font-weight: bold; font-size: 18px; color: #fff;"
+        >
           Page <span id="pdf-current-page">1</span> of <span id="pdf-total-pages">--</span>
         </span>
 
         <button id="pdf-next" class="btn_one">Next →</button>
-        
-        <!-- <button id="pdf-fullscreen" class="btn_one" style="margin-left: 20px;">Fullscreen</button> -->
-        
-        <a href="resources/pdfs/June.25 Issue.pdf" target="_blank" download id="pdf-download" class="btn_one" style="margin-left: 20px;">Download PDF</a>
+
+        <a
+          href="#"
+          target="_blank"
+          download
+          id="pdf-download"
+          class="btn_one"
+          style="margin-left: 20px;"
+          >Download PDF</a
+        >
       </div>
     </div>
   </div>
