@@ -370,6 +370,7 @@ body {
   }
   #menu {
     display: inline-block;
+    line-height: 1.6; /* increase from default (usually ~1.2) */
   }
   #onlywide {
     display: none !important;
