@@ -104,7 +104,7 @@ body {
   color: #fff;
   position: fixed;
   left: 0;
-  bottom: 40vh;
+  bottom: 50vh; /* Adjust as needed */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,12 +112,32 @@ body {
   transition: 0.4s ease-in-out;
   border-radius: 0px 0px 100px 100px;
 }
+
 #work {
   width: 10vw;
   height: 10vw;
   text-align: center;
   font-size: 25px;
-  transform: rotate(90deg);
+  transform: rotate(-90deg); /* Change to match #about direction */
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  left: 0; /* Move to left side */
+  bottom: 30vh; /* Offset vertically from #about */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  transition: 0.4s ease-in-out;
+  border-radius: 0px 0px 100px 100px;
+}
+
+#intel {
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  font-size: 25px;
+  transform: rotate(90deg); /* Change to match #about direction */
   background: transparent;
   color: #fff;
   position: fixed;
@@ -130,6 +150,7 @@ body {
   transition: 0.4s ease-in-out;
   border-radius: 0px 0px 100px 100px;
 }
+
 #contact {
   width: 10vw;
   height: 10vw;
@@ -152,6 +173,10 @@ body {
   cursor: pointer;
 }
 #work:hover {
+  background: rgba(133, 134, 95, 0.9);
+  cursor: pointer;
+}
+#intel:hover {
   background: rgba(133, 134, 95, 0.9);
   cursor: pointer;
 }
@@ -352,6 +377,9 @@ body {
   #work {
     display: none;
   }
+  #intel {
+    display: none;
+  }
   #footer {
     text-align: center;
   }
@@ -436,7 +464,6 @@ body {
   margin: 0;
 }
 
-
 /* --- Skills List --- */
 .skills-title {
   display: flex;
@@ -475,8 +502,6 @@ body {
   color: #b3b38c;
   font-size: 20px;
 }
-
-
 
 /* Container text color for all work content */
 #work_container {
@@ -518,6 +543,20 @@ body {
   transition: padding 0.4s ease-in-out; /* smooth padding transition */
 }
 
+/* Match btn_two style and hover elongation for btn_one */
+#intel_container > section > a > button.btn_one {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(133, 134, 95);
+  background: #fff;
+  border: 3px solid #fff;
+  padding: 8px 40px;
+  border-radius: 80px;
+  font-weight: bold;
+  margin: 2vh 10px 2vh 0;
+  transition: padding 0.4s ease-in-out; /* smooth padding transition */
+}
+
 #work_container > section > a > button.btn_one:hover {
   cursor: pointer;
   padding: 8px 60px; /* elongates width on hover */
@@ -526,4 +565,48 @@ body {
   border-color: #fff; /* keep same border */
 }
 
+#intel_container > section > a > button.btn_one:hover {
+  cursor: pointer;
+  padding: 8px 60px; /* elongates width on hover */
+  color: rgb(133, 134, 95); /* keep same text color */
+  background: #fff; /* keep same background */
+  border-color: #fff; /* keep same border */
+}
 
+#intel_toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.intel-section {
+  text-align: left;
+  padding: 20px;
+}
+
+#pdf-viewer-container {
+  /* Remove border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* subtle drop shadow instead */
+  background: #ffffff00;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+#pdf-render {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background: #f9f9f9;
+}
+
+#pdf-controls button {
+  padding: 6px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#pdf-controls span {
+  font-size: 14px;
+  margin: 0 10px;
+}
