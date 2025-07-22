@@ -1,0 +1,32 @@
+name: Generate PDF List JSON
+
+on:
+  push:
+    branches: ["main", "sg_intel"]
+
+permissions:
+  contents: write # <-- Allow push/write to repo contents
+
+jobs:
+  generate-pdf-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18" # or your preferred version
+
+      - name: Generate pdfList.json
+        run: |
+          node scripts/generatePdfList.js
+
+      - name: Commit and push pdfList.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add resources/pdfs/pdfList.json
+          git commit -m "chore: update pdfList.json via workflow" || echo "No changes to commit"
+          git push
